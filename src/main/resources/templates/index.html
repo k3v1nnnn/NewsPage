@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}"/>
+    <title>Posts</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="row justify-content-center">
+	<a class="btn btn-success btn-lg" th:href="@{/addPost}">Add Post</a>
+</div>
+<div class="container">
+	<div class="row row-cols-1 row-cols-md-3" >
+		<div class="col mb-4" th:each="post : ${posts}" >
+			<div class="card text-center" >
+				<div class="card-header" >
+					<h3 th:text=${post.title}>title</h3>
+				</div>
+				<div class="card-body">
+					<p th:text=${post.resume}>text</p>
+				</div>
+				<div class="card-footer text-muted">
+					<p th:text=${post.date}>date</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}"/>
+    <title>AddProduct</title>
+</head>
+<body>
+<div th:replace="fragments/header.html :: header"></div>
+<div class="container">
+	<div class="card">
+        <div class="card-header text-center">
+            <h2>Add Post</h2>
+        </div>
+        <div class="card-body">
+            <form id="itemForm" method="POST" th:object="${post}">
+                <div class="form-group">
+                    <label for="titleId"><h4>Title</h4></label>
+                    <input type="text" class="form-control" id="titleId" th:field="*{title}" >
+                    <label for="resumeId"><h4>Resume</h4></label>
+                    <input type="text" class="form-control" id="resumeId" th:field="*{resume}" >
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg"  value="Add">
+            </form>
+        </div>
+  		</div>		
+</div>
+<div th:replace="fragments/footer :: footer"></div>  
+</body>
+</html>
