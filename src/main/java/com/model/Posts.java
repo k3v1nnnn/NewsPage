@@ -20,4 +20,8 @@ public class Posts {
 	public List<Item> allPosts(){
 		return this.posts;
 	}
+	
+	public void deleteItem(Item oItem) {
+		this.posts.remove(oItem);
+	}
 }

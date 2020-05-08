@@ -20,6 +20,8 @@
                     <input type="text" class="form-control" id="titleId" th:field="*{title}" >
                     <label for="resumeId"><h4>Resume</h4></label>
                     <input type="text" class="form-control" id="resumeId" th:field="*{resume}" >
+                    <label for="textId"><h4>Text</h4></label>
+                    <textarea id="textId" class="form-control" maxlength=100 rows="5" cols="30" th:field="*{text}"></textarea>
                 </div>
                 <input type="submit" class="btn btn-primary btn-lg"  value="Add">
             </form>
