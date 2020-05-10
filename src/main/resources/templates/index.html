@@ -20,6 +20,7 @@
 				</div>
 				<div class="card-body">
 					<p th:text=${post.resume}>text</p>
+					<a th:href="@{/post?id={id}(id=${post.id})}" class="alert-link">more....</a>
 				</div>
 				<div class="card-footer text-muted">
 					<p th:text=${post.date}>date</p>

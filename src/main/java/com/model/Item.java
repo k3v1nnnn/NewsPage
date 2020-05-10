@@ -7,6 +7,7 @@ public class Item {
 	private String resume;
 	private LocalDate date;
 	private String text;
+	private int id;
 	
 	public Item() {
 		this.date=LocalDate.now();
@@ -22,8 +23,10 @@ public class Item {
 	public String getResume() {return this.resume;}
 	public LocalDate getDate() {return this.date;}
 	public String getText() {return this.text;}
+	public int  getId(){return this.id;}
 	public void setTitle(String title) {this.title=title;}
 	public void setResume(String resume) {this.resume=resume;}
 	public void setText(String text) {this.text=text;}
 	public void setDate(LocalDate date) {this.date=date;}
+	public void setId(int nId) {this.id=nId;}
 }
