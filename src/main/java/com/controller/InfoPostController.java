@@ -22,6 +22,7 @@ public class InfoPostController {
 	@GetMapping
 	public String InfoPost(@RequestParam("id") int id,Model model) {
 		Item aux=this.publicPosts.getItemById(id);
+		aux.addVisits();
 		model.addAttribute("post",aux);
 		return "info_post";
 	}

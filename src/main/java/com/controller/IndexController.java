@@ -18,10 +18,6 @@ public class IndexController {
 	@Autowired
 	public IndexController( Posts nPosts) {
 		this.publicPosts = nPosts;
-		this.publicPosts.addItem(new Item("Hi","firts time !!!","text"));
-		this.publicPosts.addItem(new Item("Hi_1","firts time !!!","text"));
-		this.publicPosts.addItem(new Item("Hi_2","firts time !!!","text"));
-		this.publicPosts.addItem(new Item("Hi_3","firts time !!!","text"));
 	}
 	
 	@GetMapping

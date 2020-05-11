@@ -38,4 +38,7 @@ public class Posts {
 		}
 		return aux;
 	}
+	public void deleteItemById(int id) {
+		this.deleteItem(this.getItemById(id));
+	}
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.model.Item;
 import com.model.Posts;
@@ -19,8 +20,9 @@ public class DeletePostController {
 	}
 	
 	@PostMapping
-	public void DeletePost(Item oItem) {
-		this.publicPosts.deleteItem(oItem);
+	public String DeletePost(@RequestParam("id") int id) {
+		this.publicPosts.deleteItemById(id);
+		return "redirect:";
 	}
 	
 }
